@@ -1,18 +1,3 @@
-// --------------------- location --------------------
-function getLocation() {
-  if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-  }
-  else {
-      alert("Geolocation is not supported by your browser.");
-  }
-}
-
-function showPosition(position) {
-  alert("Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude);
-}
-
-getLocation();
 
 // -------------modal -----------------
 // Get the modal
@@ -34,3 +19,21 @@ window.onclick = function(event) {
 
 
 
+// slider
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
